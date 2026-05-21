@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Karma", serif;
+  overflow-x: hidden;
+}
+
+/* NAVBAR SYTLE */
+
+.navbar {
+  padding: 18px 0;
+  background: white;
+}
+
+.navbar-brand {
+  color: #004896;
+}
+
+.navbar-nav .nav-link {
+  color: #111;
+  font-weight: 600;
+  margin: 0 12px;
+  transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0e63bf;
+  border-bottom: #004896;
+}
+
+.login-link {
+  color: #0e63bf;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-member {
+  background: #0e63bf;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-member:hover {
+  background: #084d97;
+  color: white;
+}
+
+/* HERO SECTION STYLE */
+
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #004896 0%, #2d83df 55%, #001730 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Shape */
+
+.hero-shape {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(45deg);
+
+  right: 200px;
+  bottom: 200px;
+}
+
+/* CARAOUSEL STYLE */
+
+.carousel-item {
+  min-height: 90vh;
+}
+
+.hero-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* CAR IMAGE */
+
+.car-image {
+  width: 100%;
+  max-width: 650px;
+  filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.4));
+}
+
+/* TEXT AREA */
+
+.hero-title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 120px;
+  line-height: 0.9;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hero-subtitle {
+  color: white;
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+/* Orange Badge */
+
+.for-now {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+  background: #ffa600;
+  color: white;
+  padding: 24px 12px;
+  border-radius: 40px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* FEATUR BOX */
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 18px 20px;
+  text-align: center;
+  color: white;
+  width: 120px;
+}
+
+.feature-box i {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* BENEFIT */
+
+.benefit-list {
+  margin-top: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.benefit-item i {
+  color: #ffa600;
+  font-size: 34px;
+}
+
+/* BUTTON SLIDE */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+/* BUTTOM INFO */
+
+.bottom-info {
+  margin-top: 70px;
+}
+
+.bottom-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.bottom-card i {
+  font-size: 42px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ADDRES / ALAMAT */
+
+.address-box {
+  background: #ffa600;
+  color: black;
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 500;
+  margin-top: 30px;
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.address-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 10px 18px;
+}
+
+/* HEADLINE */
+.headline-small-title {
+  color: #0e63bf;
+  font-weight: 700;
+}
+
+.headline-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* FEATURE/SERVICE */
+.feature-service {
+  background: #eef4fb;
+}
+
+.service-card {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background: #ffa600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 24px;
+}
+
+/*  ABOUT */
+.about-label {
+  color: #0e63bf;
+}
+
+.btn-book {
+  background: #ffa600;
+  color: white;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+
+/* CTA */
+.cta-box {
+  background: linear-gradient(135deg, #2d83df, #0e63bf);
+  padding: 60px;
+  border-radius: 30px;
+  color: white;
+}
+
+.cta-tag {
+  color: #ffa600;
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 70px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .for-now {
+    right: -50px;
+    font-size: 18px;
+  }
+
+  .benefit-item {
+    font-size: 18px;
+  }
+
+  .feature-wrapper {
+    margin-top: 40px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+}
+
+/* HANDPHONE */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .for-now {
+    display: none;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+  }
+}
