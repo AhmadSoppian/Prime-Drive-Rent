@@ -1,0 +1,556 @@
+/* HERO SECTION STYLE */
+
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #004896 0%, #2d83df 55%, #001730 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Shape */
+
+.hero-shape {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(45deg);
+
+  right: 200px;
+  bottom: 200px;
+}
+
+/* CARAOUSEL STYLE */
+
+.carousel-item {
+  min-height: 90vh;
+}
+
+.hero-content {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+/* CAR IMAGE */
+
+.car-image {
+  width: 100%;
+  max-width: 650px;
+  filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.4));
+}
+
+/* TEXT AREA */
+
+.hero-title {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 120px;
+  line-height: 0.9;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hero-subtitle {
+  color: white;
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+/* Orange Badge */
+
+.for-now {
+  position: absolute;
+  right: 80px;
+  top: 40px;
+  background: #ffa600;
+  color: white;
+  padding: 24px 12px;
+  border-radius: 40px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* FEATUR BOX */
+
+.feature-box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 18px 20px;
+  text-align: center;
+  color: white;
+  width: 120px;
+}
+
+.feature-box i {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* BENEFIT */
+
+.benefit-list {
+  margin-top: 50px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.benefit-item i {
+  color: #ffa600;
+  font-size: 34px;
+}
+
+/* BUTTON SLIDE */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  left: 20px;
+}
+
+.carousel-control-next {
+  right: 20px;
+}
+
+/* BUTTOM INFO */
+
+.bottom-info {
+  margin-top: 70px;
+}
+
+.bottom-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.bottom-card i {
+  font-size: 42px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ADDRES / ALAMAT */
+
+.address-box {
+  background: #ffa600;
+  color: black;
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 500;
+  margin-top: 30px;
+  clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);
+}
+
+.address-text {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin: 10px 18px;
+}
+
+/* HEADLINE */
+.headline-small-title {
+  color: #0e63bf;
+  font-weight: 700;
+}
+
+.headline-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* FEATURE/SERVICE */
+.feature-service {
+  background: #eef4fb;
+}
+
+.service-card {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  height: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background: #ffa600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 24px;
+}
+
+/*  ABOUT */
+.about-label {
+  color: #0e63bf;
+}
+
+.btn-book {
+  background: #ffa600;
+  color: white;
+  border-radius: 20px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-book:hover {
+  background: #9e6900;
+}
+
+/* CTA */
+.cta-box {
+  background: linear-gradient(135deg, #2d83df, #0e63bf);
+  padding: 60px;
+  border-radius: 30px;
+  color: white;
+}
+
+.cta-tag {
+  color: #ffa600;
+}
+
+/* SECTION CARD */
+
+.car-list-section {
+  background: #eef4fb;
+}
+
+/* CARD STYLE */
+
+.car-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  height: 100%;
+  border: 1px solid #e5e5e5;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.car-image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.car-image img {
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.car-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.car-badge {
+  background: #ffa600;
+  color: white;
+  width: fit-content;
+  margin: auto;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.car-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.car-info small {
+  font-size: 12px;
+  color: #777;
+}
+
+.car-info h6 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.car-rating {
+  color: #ffd700;
+  font-size: 13px;
+}
+
+.car-feature {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-item {
+  flex: 1;
+  background: #2d83df;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.car-note {
+  font-size: 10px;
+  color: red;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.buttom-text {
+  margin-top: 70px;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  color: #001730;
+  font-size: 20px;
+}
+
+.btn-book-car {
+  width: 100%;
+  border: none;
+  background: #0e63bf;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-book-car, a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn-book-car:hover {
+  background: #084d97;
+}
+
+.bottom-text {
+  color: #555;
+  margin-bottom: 20px;
+}
+/* PRIMARY BUTTON */
+.btn-more {
+  background: #0e63bf;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-more:hover {
+  background: #004896;
+  transform: scaleX(1.1);
+}
+
+/* OUTLINE BUTTON */
+
+.btn-outline-custom {
+  background: transparent;
+  border: 2px solid #0e63bf;
+  color: #0e63bf;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-outline-custom:hover {
+  background: #004896;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* contact section */
+
+.contact-section {
+  background: #ffffff;
+}
+
+.contact-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.title-line {
+  width: 70px;
+  height: 3px;
+  background: #777;
+  margin-bottom: 25px;
+}
+
+.contact-desc {
+  color: #555;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  background: #0e63bf;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.contact-item small {
+  color: #777;
+}
+
+.contact-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.address-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.address-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.address-item i {
+  color: #0e63bf;
+  font-size: 22px;
+}
+
+.address-item p {
+  line-height: 1.8;
+  color: #444;
+}
+
+.social-title {
+  margin-bottom: 20px;
+}
+
+.social-media {
+  display: flex;
+  gap: 12px;
+}
+
+.social-media a {
+  width: 38px;
+  height: 38px;
+  background: #f2f2f2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-media a:hover {
+  background: #0e63bf;
+  color: white;
+}
+
+.contact-form-wrapper {
+  border: 1px solid #e5e5e5;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.form-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.custom-input-home {
+  border-radius: 12px;
+  padding: 14px 18px;
+  border: 1px solid #ddd;
+  box-shadow: none !important;
+}
+
+.custom-input:focus {
+  border-color: #0e63bf;
+}
+
+.btn-send {
+  background: #ffa600;
+  border: none;
+  color: black;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-send:hover {
+  transform: translateY(-3px);
+  color: white;
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Karma:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Karma', sans-serif;
+  color: #1a2740;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Karma', sans-seri f;
+  font-weight: 700;
+}
+
+.mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
