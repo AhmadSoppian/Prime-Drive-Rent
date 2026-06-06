@@ -3,7 +3,7 @@
 
 @import url('./layouts/guest/navbar.css');
 @import url('./layouts/guest/footer.css');
-@import url('./layouts/member/');
+@import url('./layouts/guest/banner.css');
 @import url('./layouts/member/');
 
 @import url('./pages/home.css');

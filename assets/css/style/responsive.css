@@ -66,6 +66,36 @@
   .login-title {
     font-size: 42px;
   }
+
+  .hero-banner {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 56px;
+  }
+
+  .hero-subtitle-banner {
+    font-size: 36px;
+  }
+
+  .hero-image-banner {
+    margin-top: 40px;
+    height: 350px;
+  }
+
+  .car-image-banner {
+    width: 450px;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .hero-address-banner {
+    justify-content: center;
+  }
 }
 
 /* HANDPHONE */
@@ -130,5 +160,36 @@
 
   .bottom-text {
     font-size: 16px;
+  }
+
+  .hero-banner {
+    padding-top: 10vh;
+  }
+
+  .hero-title-banner {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle-banner {
+    font-size: 26px;
+  }
+
+  .hero-text-banner {
+    font-size: 14px;
+  }
+
+  .hero-address-banner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero-image-banner {
+    height: 250px;
+  }
+
+  .car-image-banner {
+    width: 320px;
   }
 }

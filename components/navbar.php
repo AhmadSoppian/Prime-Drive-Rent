@@ -20,19 +20,19 @@
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#hero-section"> Home </a>
+              <a class="nav-link" href="/"> Home </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#about-section"> About </a>
+              <a class="nav-link" href="/about"> About </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#cars-section"> Cars </a>
+              <a class="nav-link" href="/cars"> Cars </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#contact-section"> Contact </a>
+              <a class="nav-link" href="/contact"> Contact </a>
             </li>
           </ul>
 

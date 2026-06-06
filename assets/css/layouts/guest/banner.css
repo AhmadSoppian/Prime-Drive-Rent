@@ -1,0 +1,68 @@
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #004896 0%, #2d83df 55%, #001730 100%);
+}
+
+/* KONTEN */
+
+.hero-content-banner {
+  color: white;
+}
+
+.hero-title-banner {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle-banner {
+  font-family: "Karma", serif;
+  font-size: 24;
+  font-weight: 700;
+  color: #ffa600;
+  margin-bottom: 20px;
+}
+
+.hero-text-banner {
+  font-family: "Karma", serif;
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.hero-address-banner {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.maps-badge-banner {
+  background: #ffa600;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.hero-image-banner {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.car-image-banner {
+  position: absolute;
+  overflow: hidden;
+  width: 550px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
