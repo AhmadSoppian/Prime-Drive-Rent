@@ -1,0 +1,56 @@
+/* NAVBAR SYTLE */
+
+.navbar {
+  padding: 18px 0;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  color: #004896;
+}
+
+.navbar-nav .nav-link {
+  color: #111;
+  font-weight: 600;
+  margin: 0 12px;
+  transition: 1s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0e63bf;  
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.user-btn{
+    border:none;
+    background:none;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user-avatar{
+    width: 30px;;
+    height: 30px;;
+    border-radius:50%;
+    background:#0E63BF;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    font-size:18px;
+    font-family:"IBM Plex Mono", monospace;
+}
+
+.user-name{
+    font-family:"Karma", serif;
+    font-size: 18px;
+    font-weight:700;
+    color:#666;
+}

@@ -1,4 +1,4 @@
-r<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,9 +35,20 @@ r<!DOCTYPE html>
                 <div class="col-lg-5">
                     <div class="regis-card">
                         <h1 class="regis-title">
-                            Welcome our Member!
+                            Became A Member!
                         </h1>
-                        <form>
+                        <form action="/register-auth" method="post">
+                            <!-- USERNAME -->
+                            <div class="mb-4">
+                                <label class="form-label">
+                                    Username
+                                </label>
+                                <input
+                                    type="text"
+                                    name="username"
+                                    class="form-control custom-input"
+                                    placeholder="Masukan Username Anda">
+                            </div>
                             <!-- EMAIL -->
                             <div class="mb-4">
                                 <label class="form-label">
@@ -45,6 +56,7 @@ r<!DOCTYPE html>
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
                                     class="form-control custom-input"
                                     placeholder="Masukan Email Anda">
                             </div>
@@ -55,6 +67,7 @@ r<!DOCTYPE html>
                                 </label>
                                 <input
                                     type="password"
+                                    name="password"
                                     class="form-control custom-input"
                                     placeholder="Masukan Password Anda">
                             </div>
@@ -64,7 +77,7 @@ r<!DOCTYPE html>
                             </button>
                         </form>
                         <div class="bottom-text">
-                            Dont have account?
+                            Already have account?
                             <a href="/login">
                                 Login
                             </a>

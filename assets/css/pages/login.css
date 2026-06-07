@@ -95,3 +95,11 @@
   text-decoration: none;
   font-weight: 700;
 }
+
+.error-message{
+    background:#ffe5e5;
+    color:#d63031;
+    padding:10px;
+    border-radius:5px;
+    margin-bottom:15px;
+}

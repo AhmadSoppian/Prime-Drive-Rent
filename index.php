@@ -1,18 +1,23 @@
 <?php
 
-require 'routes/web.php';
+session_start();
 
-$request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+require './routes/web.php';
 
-if ($request === '') {
-    $request = '/';
-}
+$method = $_SERVER['REQUEST_METHOD'];
 
-if (isset($routes[$request])) {
-    require $routes[$request];
+$uri = parse_url(
+    $_SERVER['REQUEST_URI'],
+    PHP_URL_PATH
+);
+
+if (isset($routes[$method][$uri])) {
+
+    require $routes[$method][$uri];
+
 } else {
+
     http_response_code(404);
+
     echo "404 Not Found";
 }
-
-?>

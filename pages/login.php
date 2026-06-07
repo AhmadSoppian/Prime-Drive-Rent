@@ -46,17 +46,20 @@
                         <h1 class="login-title">
                             Welcome our Member!
                         </h1>
-                        <form>
-                            <!-- USERNAME -->
-                            <div class="mb-4">
-                                <label class="form-label">
-                                    Username
-                                </label>
-                                <input
-                                    type="text"
-                                    class="form-control custom-input"
-                                    placeholder="Masukan Username Anda">
-                            </div>
+                        <?php if (isset($_GET['error'])) : ?>
+                            <p class="error-message">
+                                <?php
+                                if ($_GET['error'] == 'email') {
+                                    echo "Email tidak ditemukan";
+                                }
+
+                                if ($_GET['error'] == 'password') {
+                                    echo "Password salah";
+                                }
+                                ?>
+                            </p>
+                        <?php endif; ?>
+                        <form action="/login-auth" method="post">
                             <!-- EMAIL -->
                             <div class="mb-4">
                                 <label class="form-label">
@@ -64,6 +67,7 @@
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
                                     class="form-control custom-input"
                                     placeholder="Masukan Email Anda">
                             </div>
@@ -74,6 +78,7 @@
                                 </label>
                                 <input
                                     type="password"
+                                    name="password"
                                     class="form-control custom-input"
                                     placeholder="Masukan Password Anda">
                             </div>
@@ -83,9 +88,9 @@
                             </button>
                         </form>
                         <div class="bottom-text">
-                            Already have account?
-                            <a href="#">
-                                Login
+                            Dont have account?
+                            <a href="/register">
+                                Sign Up
                             </a>
                         </div>
                     </div>
