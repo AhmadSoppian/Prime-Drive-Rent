@@ -1,0 +1,217 @@
+.member-dashboard{
+    background:#f5f8fc;
+    padding:50px 0;
+}
+
+/* HERO */
+
+.dashboard-hero{
+    background:linear-gradient(
+        135deg,
+        #004896 0%,
+        #2D83DF 55%,
+        #001730 100%
+    );
+    border-radius:30px;
+    padding:60px;
+    color:white;
+}
+
+.dashboard-hero-subtitle{
+    font-family:"IBM Plex Mono", monospace;
+    color:#FFA600;
+}
+
+.dashboard-hero-title{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:56px;
+    font-weight:700;
+    margin:20px 0;
+}
+
+.dashboard-hero-text{
+    font-family:"Karma", serif;
+    font-size:20px;
+}
+
+.dashboard-btn-book-car{
+    background:#FFA600;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:14px 30px;
+    margin-top:20px;
+    font-family:"Karma", serif;
+    font-weight:700;
+}
+
+.dashboard-hero-car{
+    max-width:450px;
+}
+
+/* STATS */
+
+.stats-section{
+    margin-top:40px;
+}
+
+.stats-card{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.stats-card i{
+    font-size:32px;
+    color:#FFA600;
+}
+
+.stats-card h3{
+    font-family:"IBM Plex Mono", monospace;
+    color:#004896;
+    margin-top:15px;
+}
+
+.stats-card p{
+    font-family:"Karma", serif;
+    margin:0;
+}
+
+/* CARD */
+
+.dashboard-card{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.section-header h2{
+    font-family:"IBM Plex Mono", monospace;
+    color:#004896;
+    font-size:28px;
+}
+
+/* BOOKING */
+
+.booking-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.booking-car{
+    width:180px;
+}
+
+.status-approved{
+    background:#198754;
+    color:white;
+    padding:8px 18px;
+    border-radius:8px;
+}
+
+.btn-detail{
+    background:#0E63BF;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+}
+
+/* PROFILE */
+
+.profile-card{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#004896;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-size:32px;
+    font-family:"IBM Plex Mono", monospace;
+}
+
+.profile-card h4{
+    margin-top:20px;
+    font-family:"IBM Plex Mono", monospace;
+}
+
+.profile-info{
+    display:flex;
+    justify-content:space-around;
+}
+
+.profile-info strong{
+    display:block;
+    color:#004896;
+    font-size:24px;
+}
+
+.profile-info span{
+    font-family:"Karma", serif;
+}
+
+/* MINI CARD */
+
+.mini-car-card{
+    background:white;
+    border:1px solid #eee;
+    border-radius:20px;
+    text-align:center;
+    padding:20px;
+
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.mini-car-card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    margin-bottom:15px;
+}
+
+.mini-car-card h5{
+    font-family:"IBM Plex Mono", monospace;
+    margin-top:15px;
+    min-height:60px;
+}
+
+.mini-car-card button{
+    width:100%;
+    border:none;
+    background:#FFA600;
+    color:white;
+    padding:10px;
+    border-radius:10px;
+
+    margin-top:auto;
+}
+
+/* TABLE */
+
+.table thead{
+    background:#004896;
+    color:white;
+}
+
+.table th{
+    font-family:"IBM Plex Mono", monospace;
+}

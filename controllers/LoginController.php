@@ -27,5 +27,5 @@ if ($password != $user['password']) {
 
 $_SESSION['user'] = $user;
 
-header('Location: /member');
+header('Location: /dashboard');
 exit;

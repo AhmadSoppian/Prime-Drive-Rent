@@ -19,11 +19,7 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/"> Home </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/about"> About </a>
+                    <a class="nav-link" href="/dashboard"> Home </a>
                 </li>
 
                 <li class="nav-item">
@@ -39,9 +35,9 @@
             <div class="dropdown">
 
                 <button
-                    class="user-btn"
+                    class="user-btn-nav"
                     data-bs-toggle="dropdown">
-                    <div class="user-avatar">
+                    <div class="user-avatar-nav">
                         A
                     </div>
                     <?php if (isset($_SESSION['user'])) : ?>
@@ -57,11 +53,6 @@
                     <li>
                         <a class="dropdown-item" href="#">
                             Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            My Booking
                         </a>
                     </li>
                     <li>
@@ -85,4 +76,4 @@
     </div>
 </nav>
 
-<!-- NAVBAR SELESAI -->
+<!-- NAVBAR SELESAI -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

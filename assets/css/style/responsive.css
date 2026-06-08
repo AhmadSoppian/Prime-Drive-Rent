@@ -96,6 +96,33 @@
   .hero-address-banner {
     justify-content: center;
   }
+
+  .dashboard-hero {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .dashboard-hero-title {
+    font-size: 42px;
+  }
+
+  .dashboard-hero-car {
+    max-width: 350px;
+    margin-top: 30px;
+  }
+
+  .dashboard-booking-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashboard-booking-car {
+    width: 220px;
+  }
+
+  .dashboard-profile-card {
+    margin-top: 30px;
+  }
 }
 
 /* HANDPHONE */
@@ -191,5 +218,89 @@
 
   .car-image-banner {
     width: 320px;
+  }
+
+  .dashboard-hero {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .dashboard-hero-subtitle {
+    font-size: 14px;
+  }
+
+  .dashboard-hero-title {
+    font-size: 28px;
+    margin: 15px 0;
+  }
+
+  .dashboard-hero-text {
+    font-size: 15px;
+  }
+
+  .dashboard-btn-book-car {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .dashboard-hero-car {
+    max-width: 220px;
+  }
+
+  .stats-card {
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  .stats-card i {
+    font-size: 26px;
+  }
+
+  .stats-card h3 {
+    font-size: 24px;
+  }
+
+  .dashboard-card {
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  .booking-card {
+    gap: 15px;
+  }
+
+  .booking-car {
+    width: 160px;
+  }
+
+  .btn-detail {
+    width: 100%;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .profile-card h4 {
+    font-size: 20px;
+  }
+
+  .mini-car-card {
+    padding: 15px;
+  }
+
+  .mini-car-card h5 {
+    font-size: 16px;
+  }
+
+  .mini-car-card button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .table {
+    min-width: 650px;
   }
 }
