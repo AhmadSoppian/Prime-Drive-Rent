@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $sql);
 
 <body>
 
-    <?php include './components/navbar.php' ?>
+    <?php include './components/navbar-member.php' ?>
 
     <?php include './components/banner.php' ?>
 
@@ -72,7 +72,17 @@ $result = mysqli_query($conn, $sql);
                             </h5>
                             <!-- BADGE -->
                             <div class="car-badge">
-                                <?= $car['status']; ?>
+                                <?php if ($car['status'] == 'rented'): ?>
+                                    <span class="badge bg-danger">
+                                        Rented
+                                    </span>
+
+                                <?php elseif ($car['status'] == 'available'): ?>
+                                    <span class="badge bg-success">
+                                        available
+                                    </span>
+                                    
+                                <?php endif ?>
                             </div>
                             <!-- PRICE + RATING -->
                             <div class="car-info">
@@ -106,7 +116,7 @@ $result = mysqli_query($conn, $sql);
                             <!-- BUTTON -->
                             <button class="btn-book-car">
                                 <i class="bi bi-calendar-check"></i>
-                                <a href="/login">book now</a>
+                                <a href="/rent?id=<?= $car['id']; ?>">book now</a>
                             </button>
                         </div>
                     </div>

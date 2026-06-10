@@ -1,0 +1,21 @@
+.booking-table {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.booking-table thead {
+  background: #ffa600;
+  color: white;
+}
+
+.booking-table th {
+  padding: 15px;
+  font-weight: 600;
+}
+
+.booking-table td {
+  padding: 15px;
+  vertical-align: middle;
+}

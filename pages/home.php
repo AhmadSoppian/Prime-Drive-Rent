@@ -52,7 +52,7 @@ $result = mysqli_query($conn, $sql);
 
                 <div class="carousel-item active">
                     <div class="container hero-content">
-                        <div class="row align-items-center">
+                            <div class="row align-items-center">
                             <!-- COL LEFT -->
 
                             <div class="col-lg-6">
@@ -382,7 +382,7 @@ $result = mysqli_query($conn, $sql);
                             </button>
                         </div>
                     </div>
-                <?php endwhile; ?>  
+                <?php endwhile; ?>
             </div>
             <!-- BOTTOM -->
             <div class="text-center mt-5">
@@ -392,10 +392,10 @@ $result = mysqli_query($conn, $sql);
                 </p>
                 <div class="d-flex justify-content-center gap-3 flex-wrap">
                     <button class="btn-more">
-                        Temukan Pilihan Mobil Lain
+                        <a href="/login">Temukan Pilihan Mobil Lain</a>
                     </button>
-                    <button class="btn-outline-custom">
-                        UNIT LAIN
+                    <button class="btn-outline-custom" href="/login">
+                        Unit Lain
                     </button>
                 </div>
             </div>

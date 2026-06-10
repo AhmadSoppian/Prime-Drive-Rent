@@ -4,8 +4,45 @@ require_once './config/database.php';
 
 $sql = "SELECT * FROM cars LIMIT 4";
 
-$result = mysqli_query($conn, $sql);
+$resultCars = mysqli_query($conn, $sql);
 
+$userId = $_SESSION['user']['id'];
+
+$sqlActive = "
+SELECT COUNT(*) AS total_active
+FROM bookings
+WHERE user_id = '$userId'
+AND status = 'Active'
+";
+
+$resultActive = mysqli_query($conn, $sqlActive);
+
+$active = mysqli_fetch_assoc($resultActive);
+
+$sqlActiveBooking = "
+SELECT
+    b.*,
+    c.name,
+    c.image
+FROM bookings b
+JOIN cars c
+ON b.car_id = c.id
+WHERE b.user_id = '$userId'
+AND b.status = 'Active'
+";
+
+$resultActiveBooking = mysqli_query($conn, $sqlActiveBooking);
+
+$sqlCompleted = "
+SELECT COUNT(*) AS total_completed
+FROM bookings
+WHERE user_id = '$userId'
+AND status = 'Completed'
+";
+
+$resultCompleted = mysqli_query($conn, $sqlCompleted);
+
+$completed = mysqli_fetch_assoc($resultCompleted);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,25 +99,18 @@ $result = mysqli_query($conn, $sql);
             </div>
             <!-- STATISTIC -->
             <div class="row g-4 stats-section">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <div class="stats-card">
                         <i class="bi bi-calendar-check"></i>
-                        <h3>1</h3>
+                        <h3><?= $active['total_active']; ?></h3>
                         <p>Active Booking</p>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-6 col-md-6">
                     <div class="stats-card">
                         <i class="bi bi-check-circle"></i>
-                        <h3>5</h3>
+                        <h3> <?= $completed['total_completed']; ?></h3>
                         <p>Completed Rental</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="stats-card">
-                        <i class="bi bi-cash-stack"></i>
-                        <h3>Rp 4.5jt</h3>
-                        <p>Total Spending</p>
                     </div>
                 </div>
             </div>
@@ -90,34 +120,46 @@ $result = mysqli_query($conn, $sql);
                 <div class="col-lg-8">
                     <div class="dashboard-card">
                         <div class="section-header">
-                            <h2>Active Booking</h2>
+                            <h2>
+                                <?= $active['total_active']; ?>
+                            </h2>
+
+                            <p>Active Booking</p>
                         </div>
-                        <div class="booking-card">
+                        <?php if (mysqli_num_rows($resultActiveBooking) > 0): ?>
 
-                            <img
-                                src="../assets/image/avanza.jpg"
-                                alt="avanza"
-                                class="booking-car">
+                            <?php while ($booking = mysqli_fetch_assoc($resultActiveBooking)): ?>
 
-                            <div>
+                                <div class="mini-car-card">
 
-                                <h4>Toyota Avanza</h4>
+                                    <img
+                                        src="../assets/image/<?= $booking['image']; ?>"
+                                        alt="<?= $booking['name']; ?>">
 
-                                <p>
-                                    10 June - 12 June
-                                </p>
+                                    <h5>
+                                        <?= $booking['name']; ?>
+                                    </h5>
 
-                                <span class="status-approved">
-                                    Approved
-                                </span>
+                                    <p>
+                                        <?= $booking['rental_days']; ?>
+                                        Hari
+                                    </p>
 
-                            </div>
+                                    <span class="btn btn-success">
+                                        <?= $booking['status']; ?>
+                                    </span>
 
-                            <button class="btn-detail">
-                                View Detail
-                            </button>
+                                </div>
 
-                        </div>
+                            <?php endwhile; ?>
+
+                        <?php else: ?>
+
+                            <p>
+                                Tidak ada booking aktif.
+                            </p>
+
+                        <?php endif; ?>
 
                     </div>
 
@@ -152,12 +194,17 @@ $result = mysqli_query($conn, $sql);
                         <div class="profile-info">
 
                             <div>
-                                <strong>5</strong>
+                                <strong>
+                                    <?= $completed['total_completed']; ?>
+                                </strong>
                                 <span>Total Rental</span>
                             </div>
 
                             <div>
-                                <strong>1</strong>
+                                <strong>
+                                    <?= $active['total_active']; ?>
+                                </strong>
+
                                 <span>Active Booking</span>
                             </div>
 
@@ -178,9 +225,7 @@ $result = mysqli_query($conn, $sql);
 
                 <div class="row g-4">
 
-                    <!-- Reuse car card yang sudah kamu punya -->
-
-                    <?php while ($car = mysqli_fetch_assoc($result)) : ?>
+                    <?php while ($car = mysqli_fetch_assoc($resultCars)) : ?>
                         <div class="col-lg-3 col-md-6">
                             <div class="mini-car-card">
                                 <img
@@ -193,64 +238,15 @@ $result = mysqli_query($conn, $sql);
                                 </span>
                                 <h5><?= $car['status']; ?></h5>
                                 <button>
-                                    Book Now
+                                    <a
+                                        href="/rent?id=<?= $car['id']; ?>"
+                                        class="btn-rent">
+                                        Rent Now
+                                    </a>
                                 </button>
                             </div>
                         </div>
                     <?php endwhile; ?>
-
-                    <!-- HISTORY -->
-                    <div class="dashboard-card mt-5">
-
-                        <div class="section-header">
-                            <h2>Rental History</h2>
-                        </div>
-
-                        <div class="table-responsive">
-
-                            <table class="table">
-
-                                <thead>
-
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Mobil</th>
-                                        <th>Tanggal</th>
-                                        <th>Total</th>
-                                        <th>Status</th>
-                                    </tr>
-
-                                </thead>
-
-                                <tbody>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Avanza</td>
-                                        <td>10 June 2025</td>
-                                        <td>Rp 500.000</td>
-                                        <td>
-                                            Selesai
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Innova</td>
-                                        <td>15 May 2025</td>
-                                        <td>Rp 1.000.000</td>
-                                        <td>
-                                            Selesai
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-
-                        </div>
-
-                    </div>
 
                 </div>
 

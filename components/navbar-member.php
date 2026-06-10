@@ -23,11 +23,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/cars"> Cars </a>
+                    <a class="nav-link" href="/armada"> Armada </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact"> Contact </a>
+                    <a class="nav-link" href="/my-booking"> My Booking </a>
                 </li>
             </ul>
 
@@ -51,12 +51,12 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="/profile">
                             Profile
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="/my-booking">
                             History Rental
                         </a>
                     </li>
